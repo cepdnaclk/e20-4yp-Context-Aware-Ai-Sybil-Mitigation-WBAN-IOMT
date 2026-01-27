@@ -62,3 +62,5 @@ experiments/outputs/**
 *~
 *.swp
 *.swo
+
+firmware/node/include/secrets.h
