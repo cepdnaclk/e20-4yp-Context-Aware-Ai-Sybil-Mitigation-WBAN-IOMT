@@ -91,6 +91,6 @@ The proposed methodology follows a multi-phase approach:
 ## Links
 
 - [Project Repository](https://github.com/cepdnaclk/e20-4yp-Context-Aware-Ai-Sybil-Mitigation-WBAN-IOMT)
-- [Project Page](https://cepdnaclk.github.io/e20-4yp-context-aware-ai-sybil-mitigation-wban-iomt/)
+- [Project Page](https://cepdnaclk.github.io/e20-4yp-Context-Aware-Ai-Sybil-Mitigation-WBAN-IOMT/)
 - [Department of Computer Engineering](http://www.ce.pdn.ac.lk/)
 - [University of Peradeniya](https://eng.pdn.ac.lk/)
