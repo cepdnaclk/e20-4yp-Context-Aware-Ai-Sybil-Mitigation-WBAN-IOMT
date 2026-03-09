@@ -1,7 +1,7 @@
 {
-  "run_id": 1,
-  "scenario_id": "S0_NORMAL",
-  "description": "Phase A baseline: normal traffic with two legitimate nodes (no Sybil).",
+  "run_id": 2,
+  "scenario_id": "S0_NORMAL_LOW_SIGNAL",
+  "description": "Phase A baseline: normal traffic with two legitimate nodes (no Sybil) low signal.",
   "duration_s": 18000,
 
   "nodes": [
