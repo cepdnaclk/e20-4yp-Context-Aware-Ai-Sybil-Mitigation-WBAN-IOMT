@@ -1,0 +1,49 @@
+# Data files
+*.csv
+*.xlsx
+*.xls
+*.json
+
+# Dataset folders
+/data/
+/combine dataset/
+/data_1/
+/data2/
+/final/
+/final_dataset/
+/final_dataset - Copy/
+/final_dataset - Copy (2)/
+/content_awareness/
+/graph/
+/mix/
+/new/
+/normal/
+/sybil/
+/sybil_pure/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
