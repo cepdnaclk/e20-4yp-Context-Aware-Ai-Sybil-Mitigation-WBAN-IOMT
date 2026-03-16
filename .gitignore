@@ -48,14 +48,14 @@ Thumbs.db
 # ================================
 # Real experiment outputs
 # ================================
-experiments/outputs/**
+experiments/real/outputs/**
 
 # Ignore parsed captures
-experiments/outputs/**/udp_packets.csv
-experiments/outputs/**/sniffer_frames.csv
-experiments/outputs/**/collector.log
-experiments/outputs/**/sniff.pcap
-experiments/outputs/**/*.zip
+experiments/real/outputs/**/udp_packets.csv
+experiments/real/outputs/**/sniffer_frames.csv
+experiments/real/outputs/**/collector.log
+experiments/real/outputs/**/sniff.pcap
+experiments/real/outputs/**/*.zip
 
 # ================================
 # Synthetic dataset outputs
