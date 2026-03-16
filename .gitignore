@@ -42,8 +42,9 @@ Thumbs.db
 # ================================
 # Experiment outputs (generated)
 # ================================
-experiments/outputs/
-experiments/outputs/**
+experiments/real/outputs/
+experiments/real/outputs/**
+experiments/synthetic/datasets/**
 
 # ================================
 # Network captures & large data
