@@ -37,7 +37,7 @@
       "name": "sybil_clone_ecg_test",
       "target_node_id": "ecg_01",
       "msg_type": "ECG",
-      "tx_period_ms": 200
+      "tx_period_ms": 20
     },
     {
       "enabled": true,
@@ -45,7 +45,7 @@
       "name": "sybil_clone_eeg_test",
       "target_node_id": "eeg_01",
       "msg_type": "EEG",
-      "tx_period_ms": 100
+      "tx_period_ms": 10
     }
   ]
 }
