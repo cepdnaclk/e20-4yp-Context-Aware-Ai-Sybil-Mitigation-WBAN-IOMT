@@ -11,13 +11,13 @@ title: Context-Aware Self-Healing Security Framework for WBAN Against Sybil Atta
 
 #### Team
 
-- E/20/049, Chanuka B.D.K., [e20049@eng.pdn.ac.lk](mailto:e20049@eng.pdn.ac.lk)
-- E/20/318, Ranawaka R.A.D.J.I., [e20318@eng.pdn.ac.lk](mailto:e20318@eng.pdn.ac.lk)
-- E/20/370, Sewmini K.T.R., [e20370@eng.pdn.ac.lk](mailto:e20370@eng.pdn.ac.lk)
+- E/20/049, Chanuka B.D.K., [email](mailto:e20049@eng.pdn.ac.lk)
+- E/20/318, Ranawaka R.A.D.J.I., [email](mailto:e20318@eng.pdn.ac.lk)
+- E/20/370, Sewmini K.T.R., [email](mailto:e20370@eng.pdn.ac.lk)
 
 #### Supervisors
 
-- Dr. Suneth Namal Karanarathna, [suneth@eng.pdn.ac.lk](mailto:suneth@eng.pdn.ac.lk)
+- Dr. Suneth Namal Karanarathna, [email](mailto:namal@eng.pdn.ac.lk)
 
 ---
 
