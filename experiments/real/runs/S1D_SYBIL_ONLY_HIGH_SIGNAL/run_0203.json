@@ -1,0 +1,42 @@
+{
+  "run_id": 203,
+  "scenario_id": "S1D_SYBIL_ONLY_HIGH_SIGNAL",
+  "description": "Sybil-only for ecg_01 (legit ecg_01 OFF). Sybil attacker clones ecg_01 floods data at 100 pps (ecg_01).",
+  "duration_s": 10800,
+
+  "nodes": [
+    { "node_id": "eeg_01", "msg_type": "EEG", "tx_period_ms": 50 }
+  ],
+
+  "gateway": {
+    "listen_ip": "0.0.0.0",
+    "listen_port": 5005,
+    "output_root": "experiments/outputs"
+  },
+
+  "sniffer": {
+    "enabled": true,
+    "iface": "wlp8s0f4u1mon",
+    "pcap_filename": "sniff.pcap",
+    "csv_filename": "sniffer_frames.csv"
+  },
+
+  "attackers": [
+    {
+      "enabled": true,
+      "type": "esp32",
+      "name": "sybil_clone_ecg_low",
+      "target_node_id": "ecg_01",
+      "msg_type": "ECG",
+      "tx_period_ms": 500
+    },
+    {
+      "enabled": true,
+      "type": "esp32",
+      "name": "noise_flooder_100pps",
+      "node_id": "ecg_01",
+      "msg_type": "ECG_SYBIL",
+      "tx_period_ms": 10
+    }
+  ]
+}

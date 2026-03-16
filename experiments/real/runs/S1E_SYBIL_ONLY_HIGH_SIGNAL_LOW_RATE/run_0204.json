@@ -1,0 +1,35 @@
+{
+  "run_id": 204,
+  "scenario_id": "S1E_SYBIL_ONLY_HIGH_SIGNAL_LOW_RATE",
+  "description": "Sybil-only run: attacker ESP32 impersonates ecg_01 while legitimate ecg_01 is offline. Attacker floods at 10 pps.",
+  "duration_s": 7200,
+
+  "nodes": [
+    {
+      "node_id": "ecg_01",
+      "msg_type": "ECG",
+      "tx_period_ms": 100
+    }
+  ],
+
+  "gateway": {
+    "listen_ip": "0.0.0.0",
+    "listen_port": 5005,
+    "output_root": "experiments/outputs"
+  },
+
+  "sniffer": {
+    "enabled": true,
+    "iface": "wlp8s0f4u1mon",
+    "pcap_filename": "sniff.pcap",
+    "csv_filename": "sniffer_frames.csv"
+  },
+
+  "attacker": {
+    "enabled": true,
+    "type": "esp32",
+    "target_node_id": "ecg_01",
+    "msg_type": "ECG",
+    "tx_period_ms": 100
+  }
+}
