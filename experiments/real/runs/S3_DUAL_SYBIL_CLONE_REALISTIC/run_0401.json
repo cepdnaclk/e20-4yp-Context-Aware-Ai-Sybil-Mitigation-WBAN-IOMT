@@ -1,0 +1,51 @@
+{
+  "run_id": 401,
+  "scenario_id": "S3_DUAL_SYBIL_CLONE_REALISTIC",
+  "description": "Network-only realistic dual Sybil clone scenario. Legitimate ecg_01 and eeg_01 run normally, while two attacker ESP32 nodes simultaneously clone ecg_01 and eeg_01 at plausible lower rates.",
+  "duration_s": 10800,
+
+  "nodes": [
+    {
+      "node_id": "ecg_01",
+      "msg_type": "ECG",
+      "tx_period_ms": 100
+    },
+    {
+      "node_id": "eeg_01",
+      "msg_type": "EEG",
+      "tx_period_ms": 50
+    }
+  ],
+
+  "gateway": {
+    "listen_ip": "0.0.0.0",
+    "listen_port": 5005,
+    "output_root": "experiments/outputs"
+  },
+
+  "sniffer": {
+    "enabled": true,
+    "iface": "wlp8s0f4u1mon",
+    "pcap_filename": "sniff.pcap",
+    "csv_filename": "sniffer_frames.csv"
+  },
+
+  "attackers": [
+    {
+      "enabled": true,
+      "type": "esp32",
+      "name": "sybil_clone_ecg_test",
+      "target_node_id": "ecg_01",
+      "msg_type": "ECG",
+      "tx_period_ms": 20
+    },
+    {
+      "enabled": true,
+      "type": "esp32",
+      "name": "sybil_clone_eeg_test",
+      "target_node_id": "eeg_01",
+      "msg_type": "EEG",
+      "tx_period_ms": 10
+    }
+  ]
+}
