@@ -402,17 +402,17 @@
                 <h2>📊 Complete Research Overview</h2>
 
                 <h3>Project Summary</h3>
-                <p>This project implements a machine learning-based system to detect Sybil attacks in Wireless Body Area Networks (WBAN). A Sybil attack occurs when an attacker creates multiple fake identities to compromise network integrity.</p>
+                <p>This project implements including a machine learning-based system to detect Sybil attacks in Wireless Body Area Networks (WBAN). A Sybil attack occurs when an attacker creates multiple fake identities to compromise network integrity.</p>
 
                 <h3>Research Journey</h3>
                 <div class="timeline">
                     <div class="timeline-item">
                         <h4>Stage 1: Data Preparation & Baseline</h4>
-                        <p>Loaded and preprocessed WBAN sensor data. Established baseline with Logistic Regression (F1: 97.51%)</p>
+                        <p>Loaded and preprocessed WBAN sensor data. Established baseline with Logistic Regression (F1: 77.87%)</p>
                     </div>
                     <div class="timeline-item">
                         <h4>Stage 2: Fast Models Evaluation</h4>
-                        <p>Trained Random Forest (300 trees). Achieved <strong>99.9% F1-Score</strong> with only <strong>0.003259ms inference</strong>. Ready for edge deployment.</p>
+                        <p>Trained Random Forest (300 trees). Achieved <strong>99.79% F1-Score</strong> with only <strong>0.002441ms inference</strong>. Ready for edge deployment.</p>
                     </div>
                     <div class="timeline-item">
                         <h4>Stage 3: Accuracy-Focused Models</h4>
@@ -447,7 +447,7 @@
                     </div>
                     <div class="card">
                         <h4>🔍 Features</h4>
-                        <div class="metric">19</div>
+                        <div class="metric">6 main features</div>
                         <div class="label">Extracted & Engineered</div>
                     </div>
                 </div>
@@ -509,12 +509,12 @@
                     </div>
                     <div class="card">
                         <h4>Features</h4>
-                        <div class="metric">19</div>
+                        <div class="metric">main 6</div>
                         <div class="label">Extracted Features</div>
                     </div>
                     <div class="card">
                         <h4>Baseline F1</h4>
-                        <div class="metric">97.51%</div>
+                        <div class="metric">77.87%</div>
                         <div class="label">Logistic Regression</div>
                     </div>
                     <div class="card">
@@ -525,17 +525,14 @@
                 </div>
 
                 <h3>Feature Engineering</h3>
-                <p>Extracted 19 features from raw WBAN sensor data:</p>
+                <p>Extracted main 6 features from raw WBAN sensor data:</p>
                 <div class="file-list">
                     <div>1. <strong>PPS</strong> - Packets Per Second</div>
-                    <div>2. <strong>UDP_PPS</strong> - UDP Packets Per Second</div>
-                    <div>3. <strong>ICMP_PPS</strong> - ICMP Packets Per Second</div>
-                    <div>4. <strong>TCP_PPS</strong> - TCP Packets Per Second</div>
-                    <div>5. <strong>Max_PPS</strong> - Maximum PPS in window</div>
-                    <div>6. <strong>Min_PPS</strong> - Minimum PPS in window</div>
-                    <div>7. <strong>StdDev_PPS</strong> - Standard Deviation</div>
-                    <div>8. <strong>Avg_Packet_Size</strong> - Average packet size</div>
-                    <div>... and 11 more WiFi & behavior metrics</div>
+                    <div>2. <strong>RSSI</strong> - Received Signal Strength Indicator</div>
+                    <div>3. <strong>Seq_gap</strong> - Sequence Gap</div>
+                    <div>4. <strong>UDP packet count</strong> - UDP Packets Count</div>
+                    <div>5. <strong>IAT</strong> - Inter-Arrival Time</div>
+                    <div>6. <strong>RSSI frame count</strong> - Packet Frame Count</div>
                 </div>
 
                 <h3>Files Generated</h3>
@@ -560,7 +557,7 @@
                 <h3>Key Findings</h3>
                 <div class="finding">
                     <strong>✓ Baseline Established</strong>
-                    Logistic Regression achieved 97.51% F1-Score. This is a strong baseline, but we can improve with more complex models in Stage 2.
+                    Logistic Regression achieved 77.87% F1-Score. This is a strong baseline, but we can improve with more complex models in Stage 2.
                 </div>
             </div>
 
@@ -625,42 +622,42 @@
                     </tr>
                     <tr>
                         <td>Precision</td>
-                        <td>97.23%</td>
+                        <td>77.87%</td>
                         <td>99.85%</td>
                         <td><span class="success-check">✓</span>RF</td>
                     </tr>
                     <tr>
                         <td>Recall</td>
-                        <td>97.79%</td>
+                        <td>65.97%</td>
                         <td>99.95%</td>
                         <td><span class="success-check">✓</span>RF</td>
                     </tr>
                     <tr>
                         <td>Inference Speed</td>
-                        <td>0.0012ms</td>
-                        <td>0.0033ms</td>
+                        <td>0.000042ms</td>
+                        <td>0.0024ms</td>
                         <td><span class="success-check">✓</span>LR</td>
                     </tr>
                 </table>
 
                 <h3>Top Features (Importance)</h3>
                 <div class="file-list">
-                    <div>1. <strong>Reset_Rate</strong> - Device restart frequency (most important)</div>
-                    <div>2. <strong>Connection_Rate</strong> - New connections per window</div>
-                    <div>3. <strong>Anomaly_Score</strong> - Statistical anomalies</div>
-                    <div>4. <strong>Protocol_Diversity</strong> - Variety of protocols used</div>
-                    <div>5. <strong>ICMP_PPS</strong> - ICMP packet rate</div>
+                    <div>1. <strong>pps</strong> - packet per second </div>
+                    <div>2. <strong>udp_pkt_count</strong> - UDP packet count </div>
+                    <div>3. <strong>seq_gap_mean</strong> - Sequence gap mean </div>
+                    <div>4. <strong>iat_mean</strong> - Inter-arrival time mean </div>
+                    <div>5. <strong>rssi_min</strong> - Minimum received signal strength </div>
                 </div>
 
                 <div class="finding">
-                    <strong>✓ Random Forest is WINNER</strong>
+                    <strong>✓ Random Forest is the best model</strong>
                     99.9% F1-Score + still &lt;5ms for edge devices. This is the production model. No need to test other models!
                 </div>
             </div>
 
             <!-- STAGE 3 -->
             <div id="stage3" class="section">
-                <h2>🎯 Stage 3: Accuracy-Focused Models</h2>
+                <h2>🎯 Stage 3: Accuracy-Focused Models (for testing process) </h2>
 
                 <h3>Objectives</h3>
                 <ul style="margin-left: 20px; margin-bottom: 20px;">
@@ -674,27 +671,26 @@
                 <div class="grid">
                     <div class="card">
                         <h4>Gradient Boosting</h4>
-                        <div class="metric">99.7%</div>
+                        <div class="metric">99.98%</div>
                         <div class="label">F1-Score</div>
                         <p style="margin-top: 10px; color: #666; font-size: 0.9em;">More complex, slower inference</p>
                     </div>
                     <div class="card">
                         <h4>XGBoost</h4>
-                        <div class="metric">99.85%</div>
+                        <div class="metric">99.98%</div>
                         <div class="label">F1-Score</div>
                         <p style="margin-top: 10px; color: #666; font-size: 0.9em;">Better accuracy, 3-5ms inference</p>
                     </div>
                     <div class="card">
                         <h4>MLP Neural Network</h4>
-                        <div class="metric">98.9%</div>
+                        <div class="metric">99.94%</div>
                         <div class="label">F1-Score</div>
                         <p style="margin-top: 10px; color: #666; font-size: 0.9em;">Requires GPU for speed</p>
                     </div>
                     <div class="card">
                         <h4>Random Forest</h4>
-                        <div class="metric">99.9%</div>
+                        <div class="metric">99.97%</div>
                         <div class="label">F1-Score</div>
-                        <p style="margin-top: 10px; color: #2ecc71; font-size: 0.9em;"><strong>✓ CHOSEN</strong></p>
                     </div>
                 </div>
 
